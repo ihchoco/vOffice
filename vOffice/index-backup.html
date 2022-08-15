@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업무용 메모PC</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <article class="hero">
+            <span>로고</span>
+            <span>토, 6월 11 8:42 오후</span>
+            <span>배터리</span>
+            <span>검색</span>
+            <span class="faq-btn" id="faqBtn">FAQ</span>
+        </article>
+        <article class="palette">
+            <!-- <div class="box" id="box">
+                <div class="iconImage">
+                    <img src="../Image/file.png" alt="파일아이콘">
+                </div>
+                <span class="boxTitle">Helloworld.txt</span>
+                <div class="infoBoxContainer">
+                    <div class="infoBox" id="infoBox">
+                        <div class="info" id="trashBinBtn">
+                            휴지통으로 이동하기
+                        </div>
+                        <div class="info" id="copyFileBtn">
+                            파일 복사하기
+                        </div>
+                        <div class="info" id="">
+                            파일 붙여넣기
+                        </div>
+                        <div class="info" id="">
+                            크기 조절하기
+                        </div>
+                        <div class="info" id="showInfoBtn">
+                            속 성
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- 프로그램(메모) 
+            <div class="program" id="program">
+                <div class="top">
+                    <span>프로그램 이름</span>
+                    <span id="closeBtn">X</span>
+                </div>
+                <div class="content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est delectus sapiente enim illum rerum modi sit repellat, vero sequi eaque, dicta, quasi maxime in voluptates aut. Consequatur eligendi corrupti tempore.
+                </div>
+                <div class="bottom">
+                        <span>length : 100byte /</span>
+                        <span>last-date : 2022-06-11 09:12:32</span>
+                </div>
+            </div> -->
+            <!-- 프로그램(휴지통) -->
+            <!-- <div class="program trashbin" id="program">
+                <div class="top">
+                    <span >휴지통</span>
+                    <span id="closeBtn">X</span>
+                </div>
+                <div class="content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est delectus sapiente enim illum rerum modi sit repellat, vero sequi eaque, dicta, quasi maxime in voluptates aut. Consequatur eligendi corrupti tempore.
+                </div>
+                <div class="bottom">
+                        <span>length : 100byte /</span>
+                        <span>last-date : 2022-06-11 09:12:32</span>
+                </div>
+            </div> -->
+            <div class="infoBoxContainer" id="trashBinInfoBox">
+                <div class="infoBox" id="infoBox">
+                    <div class="info" id="trashBinBtn">
+                        휴지통으로 이동하기
+                    </div>
+                    <div class="info" id="copyFileBtn">
+                        파일 복사하기
+                    </div>
+                    <div class="info" id="">
+                        파일 붙여넣기
+                    </div>
+                    <div class="info" id="">
+                        크기 조절하기
+                    </div>
+                    <div class="info" id="showInfoBtn">
+                        속 성
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="footer">
+            <div class="docIcon" id="trashBinIcon">
+                <div class="imageBox">
+                    <img src="../Image/trash-bin.png">
+                </div>
+            </div>
+            <div class="docIcon">
+                <div class="imageBox" id="notepadIcon">
+                    <img src="../Image/notebook.png">
+                </div>
+            </div>
+            <div class="docIcon">
+                <div class="imageBox">
+                    <img src="../Image/calculator.png">
+                </div>
+            </div>
+        </article>
+        
+        <!-- Modal F&Q -->
+        <div class="modal" id="faq-modal">
+            <div class="modal-content">
+                <a href="#none" class="btn-close" id="faqCloseBtn">X</a>
+                <div class="faq">
+                    <div class="faq-inner">
+                        <h1>자주 묻는 질문</h1>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="title">이게 무엇인가요?</div>
+                                <div class="content">브라우저에서 업무에 필요한 기본 기능을 GUI화면으로 보여주기 위해 만들었습니다.</div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="title">어떻게 사용하는가?</div>
+                                <div class="content">컴퓨터배경화면 처럼 사용</div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="title">왜 만들었는가?</div>
+                                <div class="content">공부한 내용 복습 및 공부를 하면서 새로 배우는것들을 적용하기 위한 환경을 만들고 싶어서 </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="title">앞으로의 방향은 어떻게 되는가?</div>
+                                <div class="content">현재 기본적인 HTML+CSS+JAVASCRIPT+jQuery 위주로 학습한 내용을 바탕으로 만들고 있으며 추후 백엔드 / DevOps학습하여 VDI처럼 비슷하게 사용할 수 있도록 방향성을 잡고 공부할 예정 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- FontAwesome -->
+    <script src="https://use.fontawesome.com/2c3d88347a.js"></script>
+    <!-- script import -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="JS/box.js"></script>
+    <script>
+        
+
+        $(document).ready(function(){
+            //전역객체 생성[모든 객체의 정보를 담고있음]
+            var allObjList = [];
+
+            // 배경객체 생성
+            new Palette({
+                selectorId : 'palette'
+            })
+
+            // new InfoBox({});
+            for(var i = 0; i < 5; i++){
+                let temp = new Box({
+                    allObjList : allObjList,
+                    selectorId : getOnlyId(),
+                    title : "Helloworld"+i,
+                    type : "txt",
+                    content : `hello world`,
+                    size : '2MB',
+                    date : getNow()
+                });
+                allObjList.push(temp);
+            }
+            console.log(allObjList);
+
+        });
+
+        function getOnlyId(){
+            return `box_${Date.now()}`;
+        }
+        function getNow(){
+            return new Date().toLocaleString();
+        }
+
+        // MODAL AND FAQ
+        $('#faqBtn').click(function(){
+            // $('#faq-modal').css({
+            //     'display' : 'block'
+            // });
+            $('#faq-modal').fadeToggle();
+        })
+        $('#faqCloseBtn').click(function(){
+            $('#faq-modal').fadeToggle();
+        })
+        $('.accordion-item .title').click(function(){
+            // $(this).next().stop().slideToggle(300);
+            $(this).siblings('.content').stop().slideToggle(300);
+            $(this).toggleClass('active');
+        })
+        $('.accordion-item .content').click(function(){
+            $(this).stop().slideUp(300);
+        })
+
+        
+        // DOC 프로그램 실행
+        //1. 휴지통
+        var trashBin = new TrashBin({
+            selectorId : getOnlyId(),
+            title : '휴지통',
+            trashBinList : superTrashBin
+        });
+        console.log(trashBin.trashBinList);
+
+        $("#trashBinIcon").click(function(){
+            trashBin.trashBin.stop().slideToggle();
+        });
+
+        //2. 메모장
+        var notepad = new Program({
+            selectorId : getOnlyId(),
+            title : '메모장',
+            content : '',
+            size : 0,
+            date : getNow(),
+            selfFlag : 0
+        });
+        
+        $("#notepadIcon").click(function(){
+            
+            notepad.program.stop().slideToggle();
+        })
+
+
+
+
+        // 슈퍼 전체 완전 객체를 한개를 만들어서 관리하자
+        // TrashBin을 위한 슈퍼 완전 객체를 만들어서 항상 refresh되도록 하자
+
+        /*
+        new TrashBin({
+            selectorId : getOnlyId(),
+            title : '휴지통',
+            trashBinList : [
+                {
+                    selectorId : getOnlyId(),
+                    title : "Helloworld",
+                    type : "txt",
+                    content : `hello world`,
+                    size : '2MB',
+                    date : getNow()
+                }
+            ]
+        })
+        */
+    </script>
+    
+</body>
+</html>

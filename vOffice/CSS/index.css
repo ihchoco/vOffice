@@ -1,0 +1,850 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+/* XEICON CDN  */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.focus{
+    z-index : 1000;
+}
+.container{
+    color : white;
+    fotn-size : 14px;
+    /* background-image: url('../../Image/mac_background3.png'); */
+    background-image: url('../../Image/background/8.JPG');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    /* height: 833px; */
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container article{
+}
+.container .hero{
+    border-bottom: 1px solid rgba(46, 45, 45, 0.671);
+    background-color: rgba(46, 45, 45, 0.671);
+    padding: 10px;
+}
+.container .hero h2{
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
+.container .hero .faq-btn{
+    float : right;
+    margin: 5px 20px;
+    border : 1px solid white;
+    padding: 5px;
+    margin-top : -5px;
+}
+.container .hero .faq-btn:hover{
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+/* 
+ * MODAL AND FAQ 
+ *
+*/
+.modal{
+    position : fixed;
+    background-color : rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display : none;
+    z-index: 100;
+}
+.modal-content{
+    background-color: #FFEB60;
+    width: 800px;
+    border-radius : 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    box-shadow: 0 0 15 rgba(0, 0, 0, 0.15);
+    text-align : center;
+    color: black;
+}
+.modal-content .btn-close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.faq {
+    
+}
+.faq-inner{
+    width: 750px;
+    margin: auto;
+}
+.faq-inner h1{
+    text-align : center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.accordion{}
+.accordion-item{
+    background-color: #fff;
+    padding: 15px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+    margin-bottom: 17px;;
+}
+.accordion-item .title{
+    font-weight: bold;
+    cursor: poiner;
+}
+.accordion-item .title:after{
+    content : '>';
+    transform: rotate(90deg);
+    float: right;
+    transition: 0.5s;
+    margin-top: -2px;
+}
+.accordion-item .title.active{
+    padding-bottom: 15px;
+}
+.accordion-item .title.active:after{
+    transform: rotate(270deg);
+}
+.accordion-item .content{
+    border-top: 1px solid #000;
+    font-size : 16px;
+    padding-top: 15px;
+    display : none;
+}
+
+.container .palette{
+    height: 600px;
+    height: 80vh;
+    border-top : none;
+    position: relative;
+    z-index: 0;
+}
+
+/* 백그라운드 셋팅화면 */
+.container .palette .setBox{
+    position: absolute;
+    /* top: 50px; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    top: 10px;
+    left: 350px;
+    width: 900px;
+    background: rgb(45, 42, 42);
+    border-radius: 10px;
+    z-index: 9999;
+    display: none;
+}
+.container .palette .setBox .top{
+    display: flex;
+    padding: 15px 10px 10px 10px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    padding-bottom: 20px;
+}
+.container .palette .setBox .top .left{
+    flex: 1;
+}
+.container .palette .setBox .top .center{
+    flex: 8;
+    text-align: center;
+    margin-left: -30px;
+}
+
+.container .palette .setBox .content{
+    display: flex;
+    text-align: center;
+    height: 400px;
+}
+.container .palette .setBox .content .left{
+    flex: 1;
+    font-size: 14px;
+    align-items: center;
+    margin-left: 10px;
+    padding-right: 10px;
+    line-height: 80px;
+    border-right: 1px solid rgb(212, 212, 212);
+}
+.container .palette .setBox .content .left input[type=button]{
+    padding: 5px 60px;
+    background-color: dodgerblue;
+    border: 0;
+    color: rgb(253, 253, 253);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.container .palette .setBox .content .left input[type=button]:hover{
+    cursor: pointer;
+    opacity: 0.9;
+}
+.container .palette .setBox .content .left .bgImgBox{
+    width: 100%;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 150px;
+}
+.container .palette .setBox .content .right{
+    flex: 3;
+    
+    align-items: center;
+    margin-top: 30px;
+}
+.container .palette .setBox .content .right .row{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin: 10px 0px;
+    margin-left: 10px;
+}
+.container .palette .setBox .content .right .row .bgImgBox{
+    overflow: hidden;
+    width: 140px;
+    margin: 10px;
+    height: 140px;
+}
+.container .palette .setBox .right .bgImgBox:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.container .palette .top div span{
+    display : inline-block;
+    width : 15px;
+    height: 15px;
+    background-color: gray;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.container .palette .top div span:nth-child(1){
+    background-color: rgb(205, 75, 75);
+    content: "x";
+    color: white;
+}
+.container .palette .top div span:nth-child(2){
+    background-color: yellow;
+    content: "_";
+    color: white;
+}
+.container .palette .top div span:nth-child(3){
+    background-color: rgb(87, 238, 76);
+    content: "⎅";
+    color: white;
+}
+/* END */
+
+
+.container .palette .box{
+    /* position: absolute;
+    top : 20px;
+    left : 20px; */
+    position: relative;
+    display : inline-block;
+    text-align: center;
+    margin: 20px 10px;
+    z-index: 10;
+}
+.container .palette .box .iconImage{
+    width : 70px;
+    height: 70px;
+    overflow: hidden;
+}
+.container .palette .box .boxTitle{
+    display: block;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80px;
+}
+.container .palette .box:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.container .palette .box:hover .infoBoxContainer{
+    opacity: 1;
+    
+}
+
+.container .palette .box.click{
+    /* background-color: dodgerblue; */
+    opacity: 0.5;
+}
+.container .palette .infoBoxContainer{
+    position: relative;
+    /* position : absolute; */
+    top : 0;
+    right : 0;
+    display : block;
+}
+.container .palette .infoBox{
+    display :none;
+    border: 1px solid white;
+    position: absolute;
+    width: 200px;
+    top : 0;
+    right : 200;
+    color: white;
+    z-index: 10;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container .palette .infoBox.show{
+    display : block;
+}
+.container .palette .infoBox div{
+    padding: 15px 20px;
+    border-bottom: 1px solid white;
+}
+.container .palette .infoBox div:last-child{
+    border-bottom: none;
+}
+.container .palette .infoBox div:hover{
+    background-color: rgb(8, 8, 8);
+    color: white;
+}
+
+
+.container .notepad{
+    display: block;
+    border : 1px solid white;
+    z-index: 1;
+    top: 10;
+    left: 30%;
+    width: 700px;
+    position: absolute;
+
+    overflow : hidden;
+    border-radius: 10px;
+}
+.container .viewer{
+    display: block;
+}
+
+.container .notepad .top{
+    border-bottom: 1px solid white;
+    padding: 10px 20px;
+    display : flex;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    color: white;
+}
+.container .notepad .top span{
+    display: inline-block;
+    font-size : 14px;
+}
+.continaer .notepad #closeBtn{
+    cursor: pointer;
+    font-weight : bold;
+}
+.container .notepad .content{
+    padding: 20px;
+    border-bottom: 1px solid white;
+    height: 400px;
+    background-color: rgba(141, 137, 137, 0.712);
+}
+.container .notepad .bottom{
+    padding: 5px;
+    font-size : 14px;
+    text-align: end;
+}
+
+/* 프로그램(휴지통) */
+
+.container .trashbin{
+    border: 1px solid rgb(115, 106, 106);
+    z-index: 100;
+    display: block;
+    margin-top: 10px;
+    top : 100px;
+    left : 200px;
+    
+}
+
+.container .trashbin .top{
+    background-color: rgb(83, 117, 212);
+}
+.container .trashbin .content{
+    background-color: rgb(34, 34, 34);
+    width: inherit;
+}
+.container .trashbin .bottom{
+    background-color: #1c76c1;
+}
+.container .trashbin .bottom input[type="button"]{
+    padding: 8px 20px;
+    border : 0px;
+    width: 100px;
+    background-color: #FFEB60;
+    border-radius: 5px;
+}
+
+.container .trashbin .bottom input[type="button"]:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+/* 프로그램(계산기) */
+.container .calculator{
+    display: block;
+    border : 1px solid rgb(77, 76, 76);
+    box-shadow: 1px 1px 3px rgb(77, 76, 76);
+    box-shadow: inset;
+    z-index: 100;
+    top: 10;
+    left: 60%;
+    width: 25%;
+    position: absolute;
+    color: white;
+    background-color: rgb(43, 43, 43);
+    overflow : hidden;
+    border-radius: 10px;
+    opacity: 1;
+}
+.container .calculator.focus{
+    opacity: 1;
+}
+.container .calculator.focus .top:after{
+    content : '키패드 입력모드 ON';
+    font-size : 12px;
+}
+.container .calculator .top{
+    padding: 10px;
+}
+.container .calculator .top span{
+    display : inline-block;
+    width : 15px;
+    height: 15px;
+    background-color: gray;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.container .calculator .top span:nth-child(1){
+    background-color: rgb(205, 75, 75);
+    content: "x";
+    color: white;
+}
+.container .calculator .top span:nth-child(2){
+    background-color: yellow;
+    content: "_";
+    color: white;
+}
+.container .calculator .top span:nth-child(3){
+    background-color: rgb(87, 238, 76);
+    content: "⎅";
+    color: white;
+}
+
+.container .calculator .content{
+    font-size : 45px;
+    text-align : right;
+    width: 100%;
+    overflow : hidden;
+}
+.container .calculator .bottom{
+}
+.container .calculator .bottom .row{
+    display : flex;
+}
+.container .calculator .bottom .row span{
+    display : block;
+    flex : 1;
+    border : 1px solid rgb(99, 99, 99);
+    text-align: center;
+    background-color: rgb(65, 63, 63);
+    padding: 15px 0px;
+    font-size : 21px;
+    box-sizing: border-box;
+}
+.container .calculator .bottom .row:first-child span{
+    background-color: rgb(54, 52, 52);
+}
+.container .calculator .bottom .row span:last-child{
+    background-color: orange;
+}
+.container .calculator .bottom .row:last-child span:first-child{
+    flex: 2;
+}
+
+/* 투두리스트 */
+.container .palette .todoList{
+    position: absolute;
+    /* top: 50px; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    top: 10px;
+    right: 100px;
+    width: 600px;
+    background: whitesmoke;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 9999;
+    /* display: none; */
+}
+
+.container .palette .todoList .top{
+    border-bottom: 1px solid rgb(43, 43, 43);
+    padding: 10px 30px;
+    display : flex;
+    justify-content: space-between;
+    background-color: white;
+    color: rgb(45, 91, 192);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.container .palette .todoList.focus .top:after{
+    /* content : '[ENTER ON]'; */
+    font-size: 12px;
+    line-height: 15px;
+    text-align: left;
+    color: black;
+}
+
+.container .palette .todoList .top div span{
+    display : inline-block;
+    width : 15px;
+    height: 15px;
+    background-color: gray;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.container .palette .todoList .top div span:nth-child(1){
+    background-color: rgb(205, 75, 75);
+    content: "x";
+    color: white;
+}
+
+.container .palette .todoList .top div span:nth-child(2){
+    background-color: yellow;
+    content: "_";
+    color: white;
+}
+
+.container .palette .todoList .top div span:nth-child(3){
+    background-color: rgb(87, 238, 76);
+    content: "⎅";
+    color: white;
+}
+.container .palette .todoList .content{
+    font-size : 16px;
+    text-align : right;
+    width: 102%;
+    overflow : scroll;
+    color: #000;
+    height : 450px;
+}
+
+.container .palette .todoList .all-row{
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+}
+.container .palette .todoList .all-row .noTodoContent{
+    font-size : 16px;
+    text-align : center;
+    width: 100%;
+    height : 450px;
+    padding : 150px 0px;
+    overflow : hidden;
+    color: rgb(47, 83, 201);                                                 
+}
+
+.container .palette .todoList .content .row{
+    padding: 20px 0px;
+    background-color: whitesmoke;
+    border-bottom : 1px solid black;
+    display: flex;
+    cursor: pointer;
+}
+
+.container .palette .todoList .content .row.active{
+    background-color: rgba(161, 161, 161, 0.966);
+    color: rgba(209, 209, 209, 0.808);
+}
+
+.container .palette .todoList .content .row.active .todo{
+    text-decoration: line-through;
+}
+
+.container .palette .todoList .content .row div{
+}
+
+.container .palette .todoList .content .row .checkbox{
+    text-align: center;
+    flex: 1;
+}
+.container .palette .todoList .content .row .todo{
+    text-align : left;
+    flex: 7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap:break-word;
+    line-height: 1.2em;
+    height: 1.2em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+.container .palette .todoList .content .row .etc{
+    flex: 2;
+}
+.container .palette .todoList .content .row .etc div{
+     display: inline-block;
+     padding-right: 10px;
+}
+.container .palette .todoList .bottom{
+    padding: 20px;
+    background-color: rgb(51, 99, 201);
+}
+.container .palette .todoList .bottom input[type="text"]{
+    border: 0px;  
+    padding: 14px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 5px;
+}
+ 
+.container .palette .todoList .bottom input[type="button"]{
+    border: 0px;  
+    padding: 12px;
+    width: 9%;
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 5px;
+    transform: translateX(10px);
+    text-align: center;
+}
+
+ 
+/* END */
+
+/* Chrome 브라우저 */
+
+.container .palette .chrome{
+    position: absolute;
+    /* top: 50px; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    top: 10px;
+    left: 100px;
+    width: 800px;
+    background: whitesmoke;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 9999;
+    height: 500px;
+    /* display: none; */
+}
+
+.container .palette .chrome .top{
+    border-bottom: 1px solid rgb(43, 43, 43);
+    display : flex;
+    background-color: rgba(33, 30, 30, 0.896);
+    color: rgb(45, 91, 192);
+    font-size: 18px;
+    cursor: pointer;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container .palette .chrome .top .btns span{
+    transform: translateX(10px);
+    display : inline-block;
+    width : 15px;
+    height: 15px;
+    background-color: gray;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.container .palette .chrome .top .btns span:nth-child(1){
+    background-color: rgb(205, 75, 75);
+    content: "x";
+    color: white;
+}
+
+.container .palette .chrome .top .btns span:nth-child(2){
+    background-color: yellow;
+    content: "_";
+    color: white;
+}
+
+.container .palette .chrome .top .btns span:nth-child(3){
+    background-color: rgb(87, 238, 76);
+    content: "⎅";
+    color: white;
+}
+.container .palette .chrome .top .tabs {
+    /* width: 750px; */
+    flex: 1;
+    margin-left : 30px;
+    color: rgb(147, 147, 147);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.container .palette .chrome .top .tabs #targetTabBox{
+    display: flex;
+}
+.container .palette .chrome .top .tabs .browserTabBox{
+    border-right : 1px solid rgb(94, 90, 90);
+    padding: 10px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.container .palette .chrome .top .tabs .browserTabBox .tabTitle{
+    flex: 8;
+}
+.container .palette .chrome .top .tabs .browserTabBox.active{
+    border : 1px solid rgb(32, 32, 32);
+    padding: 10px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(32, 32, 32);
+}
+.container .palette .chrome .top .tabPlusBtn {
+    flex: 1;
+    font-size: 14px;
+    color: rgb(147, 147, 147);
+    margin-left: 20px;
+}
+.container .palette .chrome .top .tabPlusBtn #tabPlusBtn {
+    cursor: pointer;
+}
+
+.container .palette .chrome .addressBar{
+    font-size : 16px;
+    width: 102%;
+    overflow : scroll;
+    color: rgb(147, 147, 147);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    overflow: hidden;
+    background-color: rgb(32, 32, 32);
+}
+.container .palette .chrome .addressBar .btns{
+    flex: 1;
+}
+.container .palette .chrome .addressBar .btns span{
+    display: inline-block;
+    padding: 0px 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.container .palette .chrome .addressBar .btns span:hover{
+    opacity: 0.7;
+}
+.container .palette .chrome .addressBar .addressBox{
+    flex: 5;
+}
+.container .palette .chrome .addressBar .addressBox input[type="text"]{
+    padding: 5px;
+    width: 95%;
+    border: 20px;
+    border: 1px solid black;
+    overflow: hidden;
+    border-radius: 2px;
+}
+.container .palette .chrome .content{
+    width: 100%;
+    height : 100%;
+    overflow: hidden;
+}
+.container .palette .chrome .content iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/* END */
+
+
+.container .footer{
+    height: 100px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    border-radius: 20px;
+    border : 1px solid rgba(148, 143, 143, 0.671);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    
+}
+.container .footer .docIcon{
+    width : 100px;
+    height : 100px;
+    padding: 10px 20px ;
+    text-align: center;
+    transition: 0.5s;
+    display: block;
+
+}
+.container .footer .docIcon:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+.container .footer .docIcon .imageBox{
+    width : 95%;
+    text-align: center;
+}
+.container .footer .docIcon span{
+    
+}
+
+#chromeIcon{
+    transform: translateY(10px);
+}
+#todoListIcon{
+    transform: translateY(5px);
+}
+#gameIcon{
+    transform: translate(-15px, 10px);
+}
+
+
+@media only screen and (max-width: 1200px) {
+    /* PC CSS  */
+    .modal-content{
+        width : 800px;
+    }
+    .container .footer{
+        width: 700px;
+    }
+}

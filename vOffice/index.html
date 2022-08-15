@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업무용 메모PC</title>
+    <link rel="shortcut icon" href="../Image/pavicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/index.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <article class="hero">
+            <span>
+                <span id="day">토</span>, 
+                <span id="month-date">6월 11</span> 
+                <span id="time">8:42</span>
+                <span id="am-pm">오후</span>
+            </span>
+            <span></span>
+            <span></span>
+            <span class="faq-btn" id="faqBtn">FAQ</span>
+        </article>
+        <article class="palette">
+            <!-- 바탕화면 우클릭 메뉴 -->
+            <div class="infoBox" id="backgroundMenuBox">
+                <div class="info" id="changeBackground">
+                    배경화면 바꾸기
+                </div>
+                <div class="info" id="clearAllFile">
+                    모두 지우기
+                </div>
+                <div class="info" id="resetBtn">
+                    초기화 하기
+                </div>
+                <div class="info" id="showInfoBtn">
+                    버전 확인하기
+                </div>
+            </div>
+            <!-- <div class="box" id="box">
+                <div class="iconImage">
+                    <img src="../Image/file.png" alt="파일아이콘">
+                </div>
+                <span class="boxTitle">Helloworld.txt</span>
+                <div class="infoBoxContainer">
+                    <div class="infoBox" id="infoBox">
+                        <div class="info" id="trashBinBtn">
+                            휴지통으로 이동하기
+                        </div>
+                        <div class="info" id="copyFileBtn">
+                            파일 복사하기
+                        </div>
+                        <div class="info" id="">
+                            파일 붙여넣기
+                        </div>
+                        <div class="info" id="">
+                            크기 조절하기
+                        </div>
+                        <div class="info" id="showInfoBtn">
+                            속 성
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- 설정화면(배경화면 변경) -->
+            <div class="setBox backgroundBox" id="setBackgroundBox">
+                <div class="top">
+                    <div class="left">
+                        <span id="exitBtn"></span>
+                        <span id="closeBtn"></span>
+                        <span id="resizeBtn"></span>
+                    </div>
+                    <div class="center">
+                        데스크탑 배경화면 및 화면보호기 설정
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="left">
+                        <span>적용 배경화면</span>
+                        <div class="bgImgBox" id="realBackgroundBox">
+                            <img src="../Image/background/8.JPG"/>
+                        </div>
+                        <div>
+                            <!-- <input type="button" value="적 용"/> -->
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="row">
+                            <div class="bgImgBox" id="realBackgroundBox">
+                                <img src="../Image/background/1.JPG"/>
+                            </div>
+                            <div class="bgImgBox" id="realBackgroundBox">
+                                <img src="../Image/background/2.JPG"/>
+                            </div>
+                            <div class="bgImgBox" id="realBackgroundBox">
+                                <img src="../Image/background/3.JPG"/>
+                            </div>
+                            <div class="bgImgBox" id="realBackgroundBox">
+                                <img src="../Image/background/4.JPG"/>
+                            </div>    
+                        </div>
+                        <div class="row">
+                            <div class="bgImgBox" id="realBackgroundBox">
+                                <img src="../Image/background/5.JPG"/>
+                            </div>
+                            <div class="bgImgBox" id="realBackgroundBox">
+                                <img src="../Image/background/6.JPG"/>
+                            </div>
+                            <div class="bgImgBox" id="realBackgroundBox">
+                                <img src="../Image/background/7.JPG"/>
+                            </div>
+                            <div class="bgImgBox" id="realBackgroundBox">
+                                <img src="../Image/background/8.JPG"/>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 프로그램(휴지통) -->
+            <div class="notepad trashbin" id="trashBin">
+                <div class="top">
+                    <span id="trashBin-title">휴지통</span>
+                    <span id="closeBtn">X</span>
+                </div>
+                <div class="content">
+                    
+                </div>
+                <div class="bottom">
+                        <span><input type="button" value="완전삭제" onclick="trashBin.clean()"></span>
+                        <span><input type="button" value="복 구" onclick="trashBin.recover()"></span>
+                </div>
+            </div>
+            <!-- 프로그램(메모)  -->
+            <div class="notepad" id="notepad">
+                <div class="top">
+                    <span id="notepad-title">프로그램 이름</span>
+                    <span id="closeBtn">X</span>
+                </div>
+                <div class="content" contenteditable="true">
+                    
+                </div>
+                <div class="bottom">
+                        <span>length : <span class='length'>0</span> /</span>
+                        <span class = "date">last-date : 2022-08-13 09:12:32</span>   
+                </div>
+            </div>
+
+            <!-- 프로그램(계산기) -->
+            <div class="calculator" id="calculator">
+                <div class="top">
+                    <span id="exitBtn"></span>
+                    <span id="closeBtn"></span>
+                    <span id="resizeBtn"></span>
+                </div>
+                <div class="content">
+                    0
+                </div>
+                <div class="bottom">
+                    <div class="row">
+                        <span value="C">C</span>
+                        <span value="+/-">+/-</span>
+                        <span value="%">%</span>
+                        <span value="/">÷</span>
+                    </div>
+                    <div class="row">
+                        <span value="7">7</span>
+                        <span value="8">8</span>
+                        <span value="9">9</span>
+                        <span value="x">x</span>
+                    </div>
+                    <div class="row">
+                        <span value="4">4</span>
+                        <span value="5">5</span>
+                        <span value="6">6</span>
+                        <span value="-">-</span>
+                    </div>
+                    <div class="row">
+                        <span value="1">1</span>
+                        <span value="2">2</span>
+                        <span value="3">3</span>
+                        <span value="+">+</span>
+                    </div>
+                    <div class="row">
+                        <span value="0">0</span>
+                        <span value=".">.</span>
+                        <span value="=">=</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 프로그램(todoList) -->
+
+            <div class="todoList" id="todoList">
+                <div class="top">
+                    <div class="left">
+                        <span id="exitBtn"></span>
+                        <span id="closeBtn"></span>
+                        <span id="resizeBtn"></span>
+                    </div>
+                    <div></div>
+                </div>
+
+                <div class="content">
+                    <div class="row active">
+                        <div class="checkbox">
+                            <i class="fa fa-check"></i>
+                        </div>
+
+                        <div class="todo">
+                            Make Something Awesome
+                        </div>
+
+                        <div class="etc">
+                            <div>2022-08-12</div>
+                            <div><i class="fa fa-times"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="checkbox">
+                            <i class="fa fa-check"></i>
+                        </div>
+
+                        <div class="todo">
+                            Make Something Awesome
+                        </div>
+
+                        <div class="etc">
+                            <div>2022-08-12</div>
+                            <div><i class="fa fa-times"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <input type="text" id="todoInput" placeholder="Record Your TODO">
+                    <input type="button" id="todoSaveButton" value="저 장" onkeyup="todoList.enterKey()">
+                </div>
+            </div>
+           
+            <!-- 프로그램(크롬브라우저) -->
+            <!-- <div class="chrome" id="chrome">
+                <div class="top">
+                    <div class="btns">
+                        <span id="exitBtn"></span>
+                        <span id="closeBtn"></span>
+                        <span id="resizeBtn"></span>
+                    </div>
+                    <div class="tabs" id="chromeTabBox">
+                        <div id="targetTabBox">
+
+                        </div>
+
+                        <div class="tabPlusBtn" id="tabPlusBtn">
+                            <i class="fa fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="addressBar">
+                    <div class="btns">
+                        <span><i class="fa fa-arrow-left"></i></span>
+                        <span><i class="fa fa-arrow-right"></i></span>
+                        <span><i class="fa fa-repeat"></i></span>
+                        <span><i class="fa fa-home"></i></span>
+                    </div>
+                    <div class="addressBox">
+                        <input type="text" placeholder="URL 입력 주소창" id="browser_address">
+                    </div>
+                </div>
+
+                <div class="content" id="chromeIframeBox">
+
+                </div>
+            </div> -->
+
+
+            <!-- 미작업(box 오른쪽 클릭시 이벤트) -->
+            <div class="infoBoxContainer" id="trashBinInfoBox">
+                <div class="infoBox" id="infoBox">
+                    <div class="info" id="trashBinBtn">
+                        휴지통으로 이동하기
+                    </div>
+                    <div class="info" id="copyFileBtn">
+                        파일 복사하기
+                    </div>
+                    <div class="info" id="">
+                        파일 붙여넣기
+                    </div>
+                    <div class="info" id="">
+                        크기 조절하기
+                    </div>
+                    <div class="info" id="showInfoBtn">
+                        속 성
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="footer">
+            <div class="docIcon" id="trashBinIcon">
+                <div class="imageBox">
+                    <img src="../Image/trash-bin.png">
+                </div>
+            </div>
+            <div class="docIcon">
+                <div class="imageBox" id="notepadIcon">
+                    <img src="../Image/notebook.png">
+                </div>
+            </div>
+            <div class="docIcon">
+                <div class="imageBox" id="calculatorIcon">
+                    <img src="../Image/calculator.png">
+                </div>
+            </div>
+            <div class="docIcon">
+                <div class="imageBox" id="chromeIcon">
+                    <img src="../Image/chrome.png">
+                </div>
+            </div>
+            <div class="docIcon">
+                <div class="imageBox" id="todoListIcon">
+                    <img src="../Image/todolist.png">
+                </div>
+            </div>
+            <div class="docIcon">
+                <div class="imageBox" id="gameIcon">
+                    <img src="../Image/game.png">
+                </div>
+            </div>
+        </article>
+        
+        <!-- Modal F&Q -->
+        <div class="modal" id="faq-modal">
+            <div class="modal-content">
+                <a href="#none" class="btn-close" id="faqCloseBtn">X</a>
+                <div class="faq">
+                    <div class="faq-inner">
+                        <h1>자주 묻는 질문</h1>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="title">이게 무엇인가요?</div>
+                                <div class="content">브라우저에서 업무에 필요한 기본 기능을 GUI화면으로 보여주기 위해 만들었습니다.</div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="title">어떻게 사용하는가?</div>
+                                <div class="content">컴퓨터배경화면 처럼 사용</div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="title">왜 만들었는가?</div>
+                                <div class="content">공부한 내용 복습 및 공부를 하면서 새로 배우는것들을 적용하기 위한 환경을 만들고 싶어서 </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="title">앞으로의 방향은 어떻게 되는가?</div>
+                                <div class="content">현재 기본적인 HTML+CSS+JAVASCRIPT+jQuery 위주로 학습한 내용을 바탕으로 만들고 있으며 추후 백엔드 / DevOps학습하여 VDI처럼 비슷하게 사용할 수 있도록 방향성을 잡고 공부할 예정 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- FontAwesome -->
+    <script src="https://use.fontawesome.com/2c3d88347a.js"></script>
+    <!-- script import -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="JS/app.js"></script>
+    <script src="JS/box.js"></script>
+    <script src="JS/memProgram.js"></script>
+    <script src="JS/trashBin.js"></script>
+    <script src="JS/calculator.js"></script>
+    <script src="JS/background.js"></script>
+    <script src="JS/todoList.js"></script>
+    <script src="JS/chrome.js"></script>
+    <script>
+        $(document).ready(function(){
+            //전역객체 생성[모든 객체의 정보를 담고있음]
+            // 배경객체 생성
+            new Palette({
+                selectorId : 'palette'
+            })
+
+            
+            /***************************
+             *  초기 값 셋팅
+             *  1. 시간 불러오기
+             *  2. 저장된 파일 불러오기
+             ***************************/
+            window.boxObjList = new Array();
+            //0. 초기 함수 호출(init)
+            app.init();
+
+            //1. 현재시간 가져오기
+            app.getCurentTimeNow();
+            setInterval(app.getCurentTimeNow, 1000*60);
+
+
+            //2. 저장된 파일 불러오기(LocalStorage)
+            //2-1. 바탕화면 파일들
+            let readFiles = app.getAllFile("files");
+            console.log("readFiles : "+readFiles);
+            let i = 0;
+            readFiles.forEach(file => {
+                // app.boxObjList.push(new Box({
+                window.boxObjList.push(new Box({
+                    selectorId : file.selectorId,
+                    title : file.title,
+                    type : file.type,
+                    content : file.content,
+                    size : file.size,
+                    date : file.date
+                }));
+                i++;
+            });
+
+        
+            //4. 셋팅(백그라운드)
+            let backgroundURL = app.getFile("backgroundURL");
+            // console.log("backgroundURL");
+            // console.log(backgroundURL);
+            var background = new BackgrondSetting({
+                 url : backgroundURL
+                // url : ''
+            });
+        
+        });
+
+        //부가적인 함수
+
+        function getOnlyId(){
+            return `box_${Date.now()}`;
+        }
+        function getNowId(){
+            return Date.now();
+        }
+        function getNow(){
+            return new Date().toLocaleString();
+        }
+
+        // DOC 프로그램 실행
+        //1. 휴지통
+        var superTrashBin = new Array(); //휴지통 배열
+        let trashBinList = app.getAllFile("trashBinList");
+        if(trashBinList.length != 0){
+            superTrashBin = trashBinList;
+        }        
+        console.log("superTrashBin 호출");
+        console.log(superTrashBin);
+        var trashBin = new TrashBin({
+            selectorId : getOnlyId(),
+            title : '휴지통',
+            trashBinList : superTrashBin
+        });
+        console.log(trashBin.trashBinList);
+        trashBin.trashBin.slideToggle(0);
+
+        $("#trashBinIcon").click(function(){
+            trashBin.trashBin.stop().slideToggle();
+        });
+
+        //2. 메모장
+        var notepad = new Notepad({
+            title : '메모장',
+            content : '',
+            size : 0,
+            date : getNow(),
+            selfFlag : 0
+        });
+        
+        //처음에 보여지기전에 바로 접어놔야지 한번 클릭으로 바로 펼쳐짐
+        notepad.notepad.slideToggle(0);
+        $("#notepadIcon").click(function(){
+            notepad.notepad.stop().slideToggle();
+        })
+
+
+        //3. 계산기
+        var calculator = new Calculator({
+            title : '계산기',
+            content : '',
+            size : 0,
+            date : getNow(),
+            selfFlag : 0
+        });
+
+        calculator.calculator.slideToggle(0);
+        $("#calculatorIcon").click(function(){
+            calculator.calculator.stop().slideToggle();
+        })
+
+        //4. TODOLIST(todoList 데이터 불러오기)
+        let readTodoList = app.getAllFile("todoList");
+
+        var todoList = new TodoList({
+            selector : 'todoList',
+            title : '투두리스트',
+            content : '',
+            size : 0,
+            date : getNow(),
+            selfFlag : 0,
+            todoListArray : readTodoList
+        })
+        todoList.todoList.slideToggle(0);
+        $("#todoListIcon").click(function(){
+            todoList.todoList.stop().slideToggle();
+        });
+
+        //5. 브라우저(Chrome)
+
+        //5-1. TAB정보 만들기
+
+        //chrome 브라우저 생성시 위치 left, top 100씩 추가해서 만들어주기
+        let browserPosition = 100;
+
+        let browser = new Chrome({
+                selector : 'chrome_'+getNowId(),
+                title : '크롬',
+                content : '',
+                size : 0,
+                // tabList : tabList,
+                selfFlag : 0,
+                browserPosition : browserPosition
+            });
+
+            browserPosition += 100;
+        //browser.chrome.slideToggle(0);
+
+        $("#chromeIcon").click(function(){
+            let browser = new Chrome({
+                selector : 'chrome_'+getNowId(),
+                title : '크롬',
+                content : '',
+                size : 0,
+                // tabList : tabList,
+                selfFlag : 0,
+                browserPosition : browserPosition
+            });
+            // browser.chrome.stop().slideToggle();
+            browserPosition += 100;
+        });
+
+        // MODAL AND FAQ
+        $('#faqBtn').click(function(){
+            // $('#faq-modal').css({
+            //     'display' : 'block'
+            // });
+            $('#faq-modal').fadeToggle();
+        })
+        $('#faqCloseBtn').click(function(){
+            $('#faq-modal').fadeToggle();
+        })
+        $('.accordion-item .title').click(function(){
+            // $(this).next().stop().slideToggle(300);
+            $(this).siblings('.content').stop().slideToggle(300);
+            $(this).toggleClass('active');
+        })
+        $('.accordion-item .content').click(function(){
+            $(this).stop().slideUp(300);
+        })
+
+    </script>
+    
+</body>
+</html>
